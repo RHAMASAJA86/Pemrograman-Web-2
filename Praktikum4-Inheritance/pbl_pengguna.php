@@ -112,21 +112,21 @@ class Administrasi extends Pengguna {
 
 $mhs = new Mahasiswa(
     "Andi",
-    "andi@email.com",
+    "andi@gmail.com",
     "2301001",
     "Sistem Informasi"
 );
 
 $dosen = new Dosen(
     "Rohman",
-    "rohman@email.com",
+    "rohman@gmail.com",
     "2301002",
     "Pemrograman Web"
 );
 
 $admin = new Administrasi(
     "Nawja",
-    "najwa@email.com",
+    "najwa@gmail.com",
     "Adn01",
     "Akademik"
 );

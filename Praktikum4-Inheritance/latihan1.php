@@ -13,7 +13,7 @@ class Pengguna {
 $pengguna1 = new Pengguna();
 
 $pengguna1->nama = "Andi";
-$pengguna1->email = "andi@example.com";
+$pengguna1->email = "andi@gmail.com";
 
 $pengguna1->tampilkanData();
 
