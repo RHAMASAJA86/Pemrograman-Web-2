@@ -80,4 +80,71 @@ class Dosen extends Pengguna {
 
 }
 
+class Administrasi extends Pengguna {
+
+    private $idPegawai;
+    private $bagian;
+
+    public function __construct(
+        $nama,
+        $email,
+        $idPegawai,
+        $bagian
+    ) {
+        parent::__construct($nama, $email);
+
+        $this->idPegawai = $idPegawai;
+        $this->bagian = $bagian;
+    }
+
+    public function tampilkanData() {
+        parent::tampilkanData();
+
+        echo "ID Pegawai: " . $this->idPegawai . "<br>";
+        echo "Bagian: " . $this->bagian . "<br>";
+    }
+
+    public function tampilkanPeran() {
+        echo "Peran: Tenaga Administrasi<br>";
+    }
+
+}
+
+$mhs = new Mahasiswa(
+    "Andi",
+    "andi@email.com",
+    "2301001",
+    "Sistem Informasi"
+);
+
+$dosen = new Dosen(
+    "Rohman",
+    "rohman@email.com",
+    "2301002",
+    "Pemrograman Web"
+);
+
+$admin = new Administrasi(
+    "Nawja",
+    "najwa@email.com",
+    "Adn01",
+    "Akademik"
+);
+
+echo "<h2>Data Mahasiswa</h2>";
+$mhs->tampilkanData();
+$mhs->tampilkanPeran();
+
+echo "<hr>";
+
+echo "<h2>Data Dosen</h2>";
+$dosen->tampilkanData();
+$dosen->tampilkanPeran();
+
+echo "<hr>";
+
+echo "<h2>Data Tenaga Administrasi</h2>";
+$admin->tampilkanData();
+$admin->tampilkanPeran();
+
 ?>
