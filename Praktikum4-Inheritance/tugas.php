@@ -20,4 +20,34 @@ class Pengguna {
 
 }
 
+class Mahasiswa extends Pengguna {
+
+    private $nim;
+    private $prodi;
+
+    public function __construct(
+        $nama,
+        $email,
+        $nim,
+        $prodi
+    ) {
+        parent::__construct($nama, $email);
+
+        $this->nim = $nim;
+        $this->prodi = $prodi;
+    }
+
+    public function tampilkanData() {
+        parent::tampilkanData();
+
+        echo "NIM: " . $this->nim . "<br>";
+        echo "Program Studi: " . $this->prodi . "<br>";
+    }
+
+    public function tampilkanPeran() {
+        echo "Peran: Mahasiswa<br>";
+    }
+
+}
+
 ?>
