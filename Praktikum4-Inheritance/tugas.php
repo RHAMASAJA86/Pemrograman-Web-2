@@ -50,4 +50,34 @@ class Mahasiswa extends Pengguna {
 
 }
 
+class Dosen extends Pengguna {
+
+    private $nidn;
+    private $bidangKeahlian;
+
+    public function __construct(
+        $nama,
+        $email,
+        $nidn,
+        $bidangKeahlian
+    ) {
+        parent::__construct($nama, $email);
+
+        $this->nidn = $nidn;
+        $this->bidangKeahlian = $bidangKeahlian;
+    }
+
+    public function tampilkanData() {
+        parent::tampilkanData();
+
+        echo "NIDN: " . $this->nidn . "<br>";
+        echo "Bidang Keahlian: " . $this->bidangKeahlian . "<br>";
+    }
+
+    public function tampilkanPeran() {
+        echo "Peran: Dosen<br>";
+    }
+
+}
+
 ?>
